@@ -2,16 +2,11 @@
 
 
 <form action="/movies" method="get">
-  <input type="text" name="movie" placeholder="Enter A Movie Here">
+  <input type="text" name="<%@movie%>" placeholder="Enter A Movie Here">
   <button>Search</button>
 </form>
 
-<% @movies.each do |movie| %>
-<ul>
-  <li>
-    <%= movie.title %>
-    <%= movie.year %>
-    <%= movie.plot %>
-  </li>
-</ul>
-<%end%>
+<%= @movie_search.each do |movie| %>
+  <%= movie.title %>
+  <%= movie.id %>
+<% end %>

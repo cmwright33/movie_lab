@@ -1,7 +1,17 @@
-<h1>This is My Movie Index</h1>
+<h1>This is My Movie Index and Will search for movies here</h1>
 
 
-<form action="movies" method="">
+<form action="/movies" method="get">
   <input type="text" name="movie" placeholder="Enter A Movie Here">
   <button>Search</button>
 </form>
+
+<% @movies.each do |movie| %>
+<ul>
+  <li>
+    <%= movie.title %>
+    <%= movie.year %>
+    <%= movie.plot %>
+  </li>
+</ul>
+<%end%>

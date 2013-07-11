@@ -1,3 +1,28 @@
+
+Movie rails app
+
+Core functions:
+
+=> render the search page in the index and input a search string.
+
+=> search fof the movies and put them out linking to each movies id
+
+
+
+=> I am have difficulty figuring out how to link the id with the coressponding movie without calling on the search again.
+ which i could do but seems really redundant.
+=> I created the page to save my favorite but was unable to find out if it works because it
+
+
+
+
+
+
+
+
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create

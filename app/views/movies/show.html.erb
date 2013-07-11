@@ -7,7 +7,4 @@ Plot: <%= @movie.plot %><br>
 MPAA: <%= @movie.mpaa_rating %><br>
 Rating: <%= @movie.rating*10.to_i %><br>
 
-<form action="/movies" method="post">
-  <input type="hidden" name="_method" placeholder="name">
-  <button>Favorite the Movie</button>
-</form>
+<%= button_to "Add to Favorites List", add_movie_favorite_path(id: @movie.id) %>

@@ -1,8 +1,14 @@
 MovieLab::Application.routes.draw do
   root :to => 'welcome#index'
-  get '/movies/search' => 'movies#search', as: 'movies_search'
-  resources :movies
 
+    resources :movies
+    get '/movies/search' => 'movies#search', :as => 'search'
+
+    # post '/movies/:id/add_favorite' => 'movies#add_favorite', as: 'add_movie_favorite'
+    # get '/movies/favorites' => 'movies#favorites'
+    # post '/movies/favorites/:id/upvote' => 'movies#upvote', as: 'upvote_movie_favorite'
+    # post '/movies/favorites/:id/downvote' => 'movies#downvote', as: 'downvote_movie_favorite'
+    # get '/movies/favorites/:id' => 'movies#favshow'
 
 
   # The priority is based upon order of creation:

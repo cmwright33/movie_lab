@@ -11,6 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20130710201615) do
+
+  create_table "movies", :force => true do |t|
+    t.string  "title"
+    t.string  "director"
+    t.string  "poster"
+    t.integer "year"
+    t.text    "plot"
+    t.string  "mpaa_rating"
+    t.float   "rating"
+  end
 
 end

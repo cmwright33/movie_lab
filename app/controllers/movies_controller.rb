@@ -20,6 +20,7 @@ def index
     fav_movie.mpaa_rating
     fav_movie.rating
     fav_movie.save
+    redirect_to '/movies'
 end
 
 

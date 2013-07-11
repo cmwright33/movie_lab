@@ -6,3 +6,8 @@ Directed by: <%= @movie.director.first %><br>
 Plot: <%= @movie.plot %><br>
 MPAA: <%= @movie.mpaa_rating %><br>
 Rating: <%= @movie.rating*10.to_i %><br>
+
+<form action="/movies" method="post">
+  <input type="hidden" name="_method" placeholder="name">
+  <button>Favorite the Movie</button>
+</form>

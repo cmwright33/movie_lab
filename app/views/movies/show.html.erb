@@ -5,6 +5,5 @@ Directed by: <%= @movie.director.first %><br>
 <img src="<%= @movie.poster %>" height="200" width="200"/><br>
 Plot: <%= @movie.plot %><br>
 MPAA: <%= @movie.mpaa_rating %><br>
-Rating: <%= @movie.rating*10.to_i %><br>
 
-<%= button_to "Add to Favorites List", add_movie_favorite_path(id: @movie.id) %>
+

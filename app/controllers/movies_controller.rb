@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = Imdb::Search.new(params[:id])
+    @movie = Imdb::Movie.new(params[:id])
   end
 
   def create
@@ -33,7 +33,6 @@ class MoviesController < ApplicationController
     movie.mpaa_rating = Imdb::Movie.new(id).mpaa_rating
     movie.rating = Imdb::Movie.new(id).rating
     movie.save
-
     end
   end
 
@@ -41,10 +40,6 @@ class MoviesController < ApplicationController
     @list = Movie.all
   end
 
-  def favshow
-    @movie = Movie.find(params[:id])
-
-  end
 
   def upvote
     movie = Movie.find(params[:id])

@@ -7,11 +7,15 @@ Core functions:
 
 => search fof the movies and put them out linking to each movies id
 
+=> I can link to each individual page using its unique id
 
+
+Problems
 
 => I am have difficulty figuring out how to link the id with the coressponding movie without calling on the search again.
- which i could do but seems really redundant.
-=> I created the page to save my favorite but was unable to find out if it works because it
+This seems really redundant.
+
+=> I created the page to save my favorite but was unable to find out if it works because the link feature doesn't seem to want to work
 
 
 

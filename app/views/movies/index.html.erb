@@ -9,5 +9,5 @@
   <h4>Displaying top 10 results:</h4><br>
   <% @search_results[0..10].each do |movie| %>
   <a href="/movies/<%= movie.id  %>"><%= movie.title %></a><br>
-<% end %>
+  <% end %>
 <% end %>

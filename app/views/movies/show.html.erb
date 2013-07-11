@@ -1,0 +1,8 @@
+<h1><%= @movie.title %>: Movie Details</h1>
+
+Released in <%= @movie.year %><br>
+Directed by: <%= @movie.director.first %><br>
+<img src="<%= @movie.poster %>" height="200" width="200"/><br>
+Plot: <%= @movie.plot %><br>
+MPAA: <%= @movie.mpaa_rating %><br>
+Rating: <%= @movie.rating*10.to_i %><br>

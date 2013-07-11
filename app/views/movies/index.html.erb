@@ -1,12 +1,13 @@
-<h1>This is My Movie Index and Will search for movies here</h1>
-
+<h1>Search for a movie</h1>
 
 <form action="/movies" method="get">
-  <input type="text" name="<%@movie%>" placeholder="Enter A Movie Here">
-  <button>Search</button>
-</form>
+  <input type="text" name="search">
+  <button>Search for a movie</button>
+</form><br>
 
-<%= @movie_search.each do |movie| %>
-  <%= movie.title %>
-  <%= movie.id %>
+<% if params[:search] %>
+  <h4>Displaying top 10 results:</h4><br>
+  <% @search_results[0..10].each do |movie| %>
+  <a href="/movies/<%= movie.id  %>"><%= movie.title %></a><br>
+<% end %>
 <% end %>

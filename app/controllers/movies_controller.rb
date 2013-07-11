@@ -1,24 +1,17 @@
 class MoviesController < ApplicationController
+
 def index
-    # @movie = Imdb::Movie.new("0095016")
-    #@movies = Movie.all
-    @movie_search = Imdb::Search.new(params[:title]).movies
-  end
-  def search
-
-    @movie_search = Imdb::Search.new(params[:movie])
-
+    if params[:search]
+      @search_results = Imdb::Movie.search(params[:search])
+    end
   end
 
-  def create
-
+  def show
+    @movie = Imdb::Movie.new(params[:id])
   end
-
-  def new
-
-  end
-
 
 end
+
+
 
 
